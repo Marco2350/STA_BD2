@@ -1,0 +1,49 @@
+﻿@model List<STA_BD2.Models.VwFactura>
+
+<div class="container">
+	<table class="table table-striped table-bordered">
+	</table>
+</div>
+<div class="text-align">
+	<div class="float-right">
+		<div>
+			<h1>Lista de Facturas</h1>
+		</div>
+	</div>
+	<br>
+</div>
+<div class="center text-center">
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>FacturaID</th>
+				<th>Cliente</th>
+				<th>Número de Cuenta</th>
+				<th>Nombre del Banco</th>
+				<th>Fecha Límite</th>
+				<th>Estado de Factura</th>
+				<th>Descripción del Paquete</th>
+				<th>Descripción del Servicio</th>
+				<th>Precio</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var factura in Model)
+			{
+				<tr>
+					<td>@factura.FacturaId</td>
+					<td>@factura.Cliente</td>
+					<td>@factura.NumeroCuenta</td>
+					<td>@factura.Nombrebanco</td>
+					<td>@factura.FechaLimite</td>
+					<td>@factura.EstadoFactura</td>
+					<td>@factura.DescripcionPaquete</td>
+					<td>@factura.DescripcionServicio</td>
+					<td>@factura.Precio</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+

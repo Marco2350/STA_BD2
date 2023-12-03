@@ -1,0 +1,53 @@
+﻿@model STA_BD2.Models.Cliente
+
+@{
+    ViewData["Title"] = "Editar Cliente";
+}
+
+<div class="container">
+    <h1>Editar Cliente</h1>
+    <form method="post" asp-action="ActualizarCliente">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PrimerNombre">Primer Nombre:</label>
+                    <input type="text" class="form-control" id="PrimerNombre" name="PrimerNombre" value="@Model.PrimerNombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="SegundoNombre">Segundo Nombre:</label>
+                    <input type="text" class="form-control" id="SegundoNombre" name="SegundoNombre" value="@Model.SegundoNombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="PrimerApellido">Primer Apellido:</label>
+                    <input type="text" class="form-control" id="PrimerApellido" name="PrimerApellido" value="@Model.PrimerApellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="SegundoApellido">Segundo Apellido:</label>
+                    <input type="text" class="form-control" id="SegundoApellido" name="SegundoApellido" value="@Model.SegundoApellido" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Numero">Número:</label>
+                    <input placeholder="0000-0000" type="text" class="form-control" id="Numero" name="Numero" value="@Model.Numero" required>
+                </div>
+                <div class="form-group">
+                    <label for="Correo">Correo:</label>
+                    <input placeholder="usuario@servidor.com" type="email" class="form-control" id="Correo" name="Correo" value="@Model.Correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="Direccion">Dirección:</label>
+                    <input type="text" class="form-control" id="Direccion" name="Direccion" value="@Model.Direccion" required>
+                </div>
+                <input type="hidden" asp-for="TipoClienteId" value="@Model.TipoClienteId">
+                <input type="hidden" asp-for="EstadoCliente" value="@Model.EstadoCliente">
+                <input type="hidden" asp-for="ClienteId" value="@Model.ClienteId">
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-dark">Guardar Cambios</button>
+            <a href="@Url.Action("ObtenerClientes", "Cliente")" class="btn btn-danger">Cancelar</a>
+        </div>
+    </form>
+</div>

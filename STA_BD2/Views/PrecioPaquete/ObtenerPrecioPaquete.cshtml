@@ -1,0 +1,35 @@
+﻿@model List<STA_BD2.Models.VwPreciopaquete>
+
+<div class="container">
+	<table class="table table-striped table-bordered">
+	</table>
+</div>
+<div class="text-align">
+	<div class="float-right">
+		<div>
+			<h1>Precios por Paquete</h1>
+		</div>
+	</div>
+	<br>
+</div>
+<div class="center text-center">
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>Paquete ID</th>
+				<th>Tipo de Paquete</th>
+				<th>Precio</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var paquete in Model)
+			{
+				<tr>
+					<td>@paquete.PaqueteId</td>
+					<td>@paquete.DescripcionPaquete</td>
+					<td>@paquete.TotalPrecio</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

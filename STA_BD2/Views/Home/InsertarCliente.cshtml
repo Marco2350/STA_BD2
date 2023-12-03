@@ -1,0 +1,64 @@
+﻿
+
+<div class="container">
+    <h1><strong>Agregar Cliente</strong></h1>
+    <form action="@Url.Action("InsertarCliente", "Cliente")" method="post" class="row">
+        <div class="col-md-6">
+            <label for="primerNombre">Primer Nombre:</label>
+            <input type="text" class="form-control" id="primerNombre" name="primerNombre" required>
+        </div>
+        <div class="col-md-6">
+            <label for="segundoNombre">Segundo Nombre:</label>
+            <input type="text" class="form-control" id="segundoNombre" name="segundoNombre">
+        </div>
+        <div class="col-md-6">
+            <label for="primerApellido">Primer Apellido:</label>
+            <input type="text" class="form-control" id="primerApellido" name="primerApellido" required>
+        </div>
+        <div class="col-md-6">
+            <label for="segundoApellido">Segundo Apellido:</label>
+            <input type="text" class="form-control" id="segundoApellido" name="segundoApellido">
+        </div>
+        <div class="col-md-6">
+            <label for="numero">Número:</label>
+            <input type="text" placeholder="9999-9999" class="form-control" id="numero" name="numero" required>
+        </div>
+        <div class="col-md-6">
+            <label for="correo">Correo:</label>
+            <input type="email" placeholder="nombre@ejemplo.com" class="form-control" id="correo" name="correo" required>
+        </div>
+        <div class="col-md-6">
+            <label for="direccion">Dirección:</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" required>
+        </div>
+        <div class="col-md-6">
+            <label for="tipoClienteID">Tipo de Cliente ID:</label>
+            <input type="number" class="form-control" id="tipoClienteID" name="tipoClienteID" required>
+        </div>
+        <div class="col-md-6">
+            <label for="estadoCliente">Estado del Cliente:</label>
+            <input type="number" class="form-control" id="estadoCliente" name="estadoCliente" required>
+        </div>
+        <div class="col-md-6">
+            <label for="servicioID">ID de Servicio:</label>
+            <input type="number" class="form-control" id="servicioID" name="servicioID" required>
+        </div>
+        <div class="col-md-6">
+            <label for="tecnicoID">ID de Técnico:</label>
+            <input type="number" class="form-control" id="tecnicoID" name="tecnicoID" required>
+        </div>
+        <div class="col-md-6">
+            <label for="cuentaBancariaID">Cuenta Bancaria:</label>
+            <select class="form-control" id="cuentaBancariaID" name="cuentaBancariaID" required>
+                <option value="">Selecciona una cuenta bancaria</option>
+                <option value="1">Cuenta Bancaria 1</option>
+                <option value="2">Cuenta Bancaria 2</option>
+            </select>
+        </div>
+
+        <div class="col-md-12 mt-3 align-content-center">
+            <button type="submit" class="btn btn-primary">Insertar Cliente</button>
+        </div>
+    </form>
+</div>
+

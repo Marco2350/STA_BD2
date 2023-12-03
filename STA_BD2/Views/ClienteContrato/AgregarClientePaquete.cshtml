@@ -1,0 +1,82 @@
+﻿@model STA_BD2.Models.ClienteContratoViewModel
+
+@{
+    ViewData["Title"] = "Agregar Cliente Paquete";
+}
+
+<div class="container">
+    <h1>Agregar Cliente con Paquete</h1>
+    <form method="post" asp-action="InsertarClientePaquete">
+        <div class="form-group">
+            <label asp-for="PrimerNombre">Primer Nombre:</label>
+            <input asp-for="PrimerNombre" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label asp-for="SegundoNombre">Segundo Nombre:</label>
+            <input asp-for="SegundoNombre" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimerApellido">Primer Apellido:</label>
+            <input asp-for="PrimerApellido" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label asp-for="SegundoApellido">Segundo Apellido:</label>
+            <input asp-for="SegundoApellido" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="Numero">Número:</label>
+            <input asp-for="Numero" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="Correo">Correo:</label>
+            <input asp-for="Correo" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="Direccion">Dirección:</label>
+            <input asp-for="Direccion" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="PaqueteId">Paquete:</label>
+            <select asp-for="PaqueteId" class="form-control">
+                <option value="1">Basico</option>
+                <option value="2">Premium</option>
+                <option value="3">Black</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="TipoClienteId">Tipo de Cliente:</label>
+            <select asp-for="TipoClienteId" class="form-control">
+                <option value="1">Empresa</option>
+                <option value="2">Persona Natural</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="TecnicoId">Técnico:</label>
+            <select asp-for="TecnicoId" class="form-control">
+                <option value="1">Douglas Palma</option>
+                <option value="2">Jose Reyes</option>
+                <option value="4">Marcos Sorto</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="CuentaBancariaId">Seleccione cuenta Bancaria:</label>
+            <select asp-for="CuentaBancariaId" class="form-control">
+                <option value="000001">000001</option>
+                <option value="000002">000002</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FechaInicio">Fecha de Inicio:</label>
+            <input asp-for="FechaInicio" class="form-control" type="date">
+        </div>
+        <div class="form-group">
+            <label asp-for="FechaFinal">Fecha Final:</label>
+            <input asp-for="FechaFinal" class="form-control" type="date">
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-dark">Agregar</button>
+    </form>
+</div>

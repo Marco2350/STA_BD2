@@ -1,0 +1,45 @@
+﻿@model List<STA_BD2.Models.VwClientesContrato>
+
+@{
+	ViewData["Title"] = "Clientes con Contrato";
+}
+<div class="container">
+	<table class="table table-striped table-bordered">
+	</table>
+</div>
+<div class="text-align">
+	<div class="float-right">
+		<div>
+			<h1>Clientes con Contrato</h1>
+			<a class="btn btn-dark" asp-area="" asp-controller="ClienteContrato" asp-action="AgregarClientePaquete">Agregar Contrato</a>
+		</div>
+	</div>
+	<br>
+</div>
+<div class="center text-center">
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>ID Contrato</th>
+				<th>ID Cliente</th>
+				<th>Nombre Cliente</th>
+				<th>Descripción Paquete</th>
+				<th>Duración</th>
+				<th>ID Factura</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var contratoCliente in Model)
+			{
+				<tr>
+					<td>@contratoCliente.ClienteContratoId</td>
+					<td>@contratoCliente.ClienteId</td>
+					<td>@contratoCliente.ClienteNombre</td>
+					<td>@contratoCliente.DescripcionPaquete</td>
+					<td>@contratoCliente.Duracion</td>
+					<td>@contratoCliente.FacturaId</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

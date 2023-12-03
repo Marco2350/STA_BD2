@@ -1,0 +1,48 @@
+﻿@model List<STA_BD2.Models.VwAsigancionesTecnico>
+
+<div class="container">
+	<table class="table table-striped table-bordered">
+	</table>
+</div>
+<h1>Lista de Asignaciones</h1>
+<div class="center text-center">
+	<div class="text-align">
+		<div class="float-right">
+			<div>
+			</div>
+		</div>
+		<br>
+	</div>
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>Tecnico ID</th>
+				<th>Nombre Tecnico</th>
+				<th>Cantidad de Contratos</th>
+				<th>Cantidad de Servicios</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var asignacion in Model)
+			{
+				<tr>
+					<td>@asignacion.TecnicoId</td>
+					<td>@asignacion.NombreTecnico</td>
+					<td>@asignacion.CantidadContratos</td>
+					<td>
+						@if (asignacion.CantidadServicios == null)
+						{
+							@:Sin Servicios Pendientes
+						}
+						else
+						{
+							@asignacion.CantidadServicios
+						}
+
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

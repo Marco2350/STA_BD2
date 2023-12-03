@@ -1,0 +1,51 @@
+﻿@model STA_BD2.Models.Cliente
+
+@{
+    ViewData["Title"] = "Agregar Cliente";
+}
+
+<div class="container">
+    <h1 class="mb-4">Agregar Cliente</h1>
+    <form method="post" asp-action="InsertarCliente">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="PrimerNombre">Primer Nombre:</label>
+                    <input type="text" class="form-control" id="PrimerNombre" name="PrimerNombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="SegundoNombre">Segundo Nombre:</label>
+                    <input type="text" class="form-control" id="SegundoNombre" name="SegundoNombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="PrimerApellido">Primer Apellido:</label>
+                    <input type="text" class="form-control" id="PrimerApellido" name="PrimerApellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="SegundoApellido">Segundo Apellido:</label>
+                    <input type="text" class="form-control" id="SegundoApellido" name="SegundoApellido" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Numero">Número:</label>
+                    <input placeholder="0000-0000" type="text" class="form-control" id="Numero" name="Numero" required>
+                </div>
+                <div class="form-group">
+                    <label for="Correo">Correo:</label>
+                    <input placeholder="usuario@servidor.com" type="email" class="form-control" id="Correo" name="Correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="Direccion">Dirección:</label>
+                    <input type="text" class="form-control" id="Direccion" name="Direccion" required>
+                </div>
+                <input type="hidden" asp-for="TipoClienteId" value="@Model.TipoClienteId">
+                <input type="hidden" asp-for="EstadoCliente" value="@Model.EstadoCliente">
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-dark">Agregar Cliente</button>
+        </div>
+    </form>
+</div>
